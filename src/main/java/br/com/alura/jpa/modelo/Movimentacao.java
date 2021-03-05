@@ -1,7 +1,5 @@
 package br.com.alura.jpa.modelo;
 
-import org.hibernate.type.LocalDateTimeType;
-
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -18,9 +16,12 @@ public class Movimentacao {
     private LocalDateTime data;
     private String descricao;
     private BigDecimal valor;
+
     @ManyToOne
     private Conta conta;
 
+    @ManyToMany
+    private List<Categoria> categorias;
 
     public Conta getConta() {
         return conta;

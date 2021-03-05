@@ -23,7 +23,7 @@ public class TestaRelacionamento {
 
         movimentacao.setData(LocalDateTime.now());
         movimentacao.setDescricao("Churrascaria");
-        movimentacao.setValor(new BigDecimal(200.0));
+        movimentacao.setValor(new BigDecimal("200.0"));
         movimentacao.setTipoMovimentacao(TipoMovimentacao.ENTRADA);
         movimentacao.setConta(conta);
 
